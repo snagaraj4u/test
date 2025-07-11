@@ -312,4 +312,13 @@ public class LoginPage extends BasePage {
         logger.info("Getting current password value");
         return getAttribute(passwordFieldLocator, "value");
     }
+    
+    /**
+     * Wait for specified seconds (public method for test access)
+     * @param seconds Number of seconds to wait
+     */
+    public void waitForSeconds(int seconds) {
+        logger.info("Waiting for " + seconds + " seconds");
+        super.waitForSeconds(seconds);
+    }
 }
