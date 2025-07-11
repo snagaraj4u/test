@@ -1,0 +1,8 @@
+com/dotnet/automation/utils/ScreenshotUtils.class
+com/dotnet/automation/constants/FrameworkConstants.class
+com/dotnet/automation/hooks/CucumberHooks.class
+com/dotnet/automation/drivers/DriverManager.class
+com/dotnet/automation/hooks/CucumberHooks$1.class
+com/dotnet/automation/pages/BasePage.class
+com/dotnet/automation/utils/ConfigReader.class
+com/dotnet/automation/pages/LoginPage.class
