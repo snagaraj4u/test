@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium TestNG Hybrid Framework Suite" verbose="1" preserve-order="true">
+    
+    <!-- Suite level listeners -->
+    <listeners>
+        <listener class-name="com.hybridframework.listeners.TestListener"/>
+        <listener class-name="com.hybridframework.listeners.ExtentReportListener"/>
+    </listeners>
+    
+    <!-- Suite level parameters -->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="qa"/>
+    <parameter name="headless" value="false"/>
+    
+    <!-- Smoke Test Suite -->
+    <test name="Smoke Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <!-- Regression Test Suite -->
+    <test name="Regression Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <!-- Negative Test Suite -->
+    <test name="Negative Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <!-- Functional Test Suite -->
+    <test name="Functional Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="functional"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <!-- Security Test Suite -->
+    <test name="Security Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="security"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <!-- Boundary Test Suite -->
+    <test name="Boundary Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="boundary"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hybridframework.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+</suite>
