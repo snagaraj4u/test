@@ -1,0 +1,67 @@
+{
+  "loginTestData": [
+    {
+      "testCase": "ValidLogin",
+      "username": "testuser",
+      "password": "Test@123",
+      "expectedResult": "Success",
+      "description": "Valid login with correct credentials"
+    },
+    {
+      "testCase": "InvalidUsername",
+      "username": "invaliduser",
+      "password": "Test@123",
+      "expectedResult": "Failure",
+      "description": "Invalid login with wrong username"
+    },
+    {
+      "testCase": "InvalidPassword",
+      "username": "testuser",
+      "password": "wrongpassword",
+      "expectedResult": "Failure",
+      "description": "Invalid login with wrong password"
+    },
+    {
+      "testCase": "EmptyUsername",
+      "username": "",
+      "password": "Test@123",
+      "expectedResult": "Failure",
+      "description": "Login with empty username"
+    },
+    {
+      "testCase": "EmptyPassword",
+      "username": "testuser",
+      "password": "",
+      "expectedResult": "Failure",
+      "description": "Login with empty password"
+    },
+    {
+      "testCase": "BothEmpty",
+      "username": "",
+      "password": "",
+      "expectedResult": "Failure",
+      "description": "Login with both fields empty"
+    },
+    {
+      "testCase": "SpecialCharacters",
+      "username": "user@#$%",
+      "password": "Test@123",
+      "expectedResult": "Failure",
+      "description": "Login with special characters in username"
+    },
+    {
+      "testCase": "SQLInjection",
+      "username": "' OR '1'='1",
+      "password": "' OR '1'='1",
+      "expectedResult": "Failure",
+      "description": "SQL injection attempt"
+    },
+    {
+      "testCase": "LongUsername",
+      "username": "averylongusernamethatexceedsthenormallimit",
+      "password": "Test@123",
+      "expectedResult": "Failure",
+      "description": "Login with very long username"
+    }
+  ]
+}
