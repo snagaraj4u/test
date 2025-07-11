@@ -100,7 +100,7 @@ public class DriverManager {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         
-        // Add Chrome options
+        // Add Chrome options for headless environments
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");
@@ -108,15 +108,39 @@ public class DriverManager {
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-web-security");
         options.addArguments("--allow-running-insecure-content");
+        options.addArguments("--disable-background-timer-throttling");
+        options.addArguments("--disable-backgrounding-occluded-windows");
+        options.addArguments("--disable-renderer-backgrounding");
+        options.addArguments("--disable-features=TranslateUI");
+        options.addArguments("--disable-ipc-flooding-protection");
+        options.addArguments("--remote-debugging-port=9222");
         
         // Set headless mode if configured
         if (ConfigReader.isHeadless()) {
-            options.addArguments("--headless");
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-background-networking");
+            options.addArguments("--enable-features=NetworkService,NetworkServiceLogging");
+            options.addArguments("--disable-default-apps");
+            options.addArguments("--disable-sync");
         }
         
-        // Set window size for headless mode
-        if (ConfigReader.isHeadless()) {
-            options.addArguments("--window-size=1920,1080");
+        // Try to find Chrome binary in common locations
+        String[] chromePaths = {
+            "/usr/bin/google-chrome",
+            "/usr/bin/google-chrome-stable",
+            "/usr/bin/chromium-browser",
+            "/usr/bin/chromium",
+            "/snap/bin/chromium"
+        };
+        
+        for (String path : chromePaths) {
+            java.io.File chromeFile = new java.io.File(path);
+            if (chromeFile.exists()) {
+                options.setBinary(path);
+                logger.info("Using Chrome binary: " + path);
+                break;
+            }
         }
         
         return new ChromeDriver(options);

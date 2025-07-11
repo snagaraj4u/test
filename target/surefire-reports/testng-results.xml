@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-11T01:37:41 UTC" name="Surefire suite" finished-at="2025-07-11T01:37:41 UTC" duration-ms="42">
+    <groups>
+      <group name="framework">
+        <method signature="FrameworkTest.validateConfigReader()[pri:1, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateConfigReader" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateExtentReportManager()[pri:2, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateExtentReportManager" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateLogger()[pri:3, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateLogger" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateFrameworkConstants()[pri:4, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateFrameworkConstants" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateTestDataPath()[pri:5, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateTestDataPath" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateExtentReportConfiguration()[pri:6, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateExtentReportConfiguration" class="com.hybridframework.tests.FrameworkTest"/>
+      </group> <!-- framework -->
+      <group name="smoke">
+        <method signature="FrameworkTest.validateConfigReader()[pri:1, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateConfigReader" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateExtentReportManager()[pri:2, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateExtentReportManager" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateLogger()[pri:3, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateLogger" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateFrameworkConstants()[pri:4, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateFrameworkConstants" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateTestDataPath()[pri:5, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateTestDataPath" class="com.hybridframework.tests.FrameworkTest"/>
+        <method signature="FrameworkTest.validateExtentReportConfiguration()[pri:6, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" name="validateExtentReportConfiguration" class="com.hybridframework.tests.FrameworkTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-07-11T01:37:41 UTC" name="Surefire test" finished-at="2025-07-11T01:37:41 UTC" duration-ms="42">
+      <class name="com.hybridframework.tests.FrameworkTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeSuite" finished-at="2025-07-11T01:37:41 UTC" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validateConfigReader()[pri:1, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateConfigReader" description="Validate ConfigReader functionality" finished-at="2025-07-11T01:37:41 UTC" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateConfigReader -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="validateExtentReportManager()[pri:2, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateExtentReportManager" description="Validate ExtentReport Manager" finished-at="2025-07-11T01:37:41 UTC" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateExtentReportManager -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="validateLogger()[pri:3, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateLogger" description="Validate Logger functionality" finished-at="2025-07-11T01:37:41 UTC" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogger -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="validateFrameworkConstants()[pri:4, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateFrameworkConstants" description="Validate Framework Constants" finished-at="2025-07-11T01:37:41 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFrameworkConstants -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="validateTestDataPath()[pri:5, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateTestDataPath" description="Validate Test Data Path Configuration" finished-at="2025-07-11T01:37:41 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTestDataPath -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="beforeMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validateExtentReportConfiguration()[pri:6, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="validateExtentReportConfiguration" description="Validate ExtentReport Configuration" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateExtentReportConfiguration -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterMethod" finished-at="2025-07-11T01:37:41 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.hybridframework.tests.FrameworkTest@20c0a64d]" started-at="2025-07-11T01:37:41 UTC" name="afterSuite" finished-at="2025-07-11T01:37:41 UTC" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.hybridframework.tests.FrameworkTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
