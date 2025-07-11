@@ -1,6 +1,7 @@
 package com.dotnet.automation.stepdefinitions;
 
 import com.dotnet.automation.pages.LoginPage;
+import com.dotnet.automation.utils.WaitUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -79,7 +80,7 @@ public class LoginStepDefinitions {
     public void i_should_be_successfully_logged_in() {
         logger.info("Verifying successful login");
         // Wait for page transition
-        loginPage.waitForSeconds(3);
+        WaitUtils.waitForSeconds(3);
         
         // Verify login success by checking absence of error message
         // and presence of expected post-login elements
@@ -138,7 +139,7 @@ public class LoginStepDefinitions {
         logger.info("Verifying error message is displayed");
         
         // Wait for error message to appear
-        loginPage.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         
         Assertions.assertThat(loginPage.isErrorMessageDisplayed())
             .as("Error message should be displayed for invalid login")
@@ -157,7 +158,7 @@ public class LoginStepDefinitions {
         logger.info("Verifying validation error message");
         
         // Wait for validation message
-        loginPage.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         
         Assertions.assertThat(loginPage.isErrorMessageDisplayed())
             .as("Validation error message should be displayed")
@@ -168,7 +169,7 @@ public class LoginStepDefinitions {
     public void i_should_see_an_error_message_containing(String expectedError) {
         logger.info("Verifying error message contains: {}", expectedError);
         
-        loginPage.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         
         if (loginPage.isErrorMessageDisplayed()) {
             String actualError = loginPage.getErrorMessage().toLowerCase();
@@ -215,7 +216,7 @@ public class LoginStepDefinitions {
     public void i_should_see_a_security_error_message() {
         logger.info("Verifying security error message for malicious input");
         
-        loginPage.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         
         // Security validation - should either show error or handle gracefully
         boolean errorDisplayed = loginPage.isErrorMessageDisplayed();

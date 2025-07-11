@@ -315,7 +315,7 @@ public abstract class BasePage {
      * Waits for specified duration
      * @param seconds seconds to wait
      */
-    protected void waitForSeconds(int seconds) {
+    public void waitForSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
             logger.debug("Waited for {} seconds", seconds);

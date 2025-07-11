@@ -23,6 +23,7 @@ public final class FrameworkConstants {
     public static final int PAGE_LOAD_TIMEOUT = 30;
     
     // File Paths
+    public static final String CONFIG_PATH = "src/test/resources/config/";
     public static final String CONFIG_FILE_PATH = "src/test/resources/config/config.properties";
     public static final String TEST_DATA_PATH = "src/test/resources/testdata/";
     public static final String FEATURES_PATH = "src/test/resources/features/";
