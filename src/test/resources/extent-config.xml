@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme -->
+        <theme>dark</theme>
+        
+        <!-- Report name -->
+        <reportName>.NET Application Automation Report</reportName>
+        
+        <!-- Document title -->
+        <documentTitle>Cucumber BDD Test Results</documentTitle>
+        
+        <!-- Encoding -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- Protocol -->
+        <protocol>https</protocol>
+        
+        <!-- Report headline -->
+        <reportHeadline>Automated Test Results for .NET Application</reportHeadline>
+        
+        <!-- Time stamp format -->
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        
+        <!-- Custom CSS -->
+        <css>
+            .brand-logo {
+                display: none;
+            }
+            .brand-logo-text {
+                color: #fff;
+                font-weight: bold;
+            }
+        </css>
+        
+        <!-- Custom JavaScript -->
+        <js>
+            // Custom JavaScript code here
+        </js>
+    </configuration>
+</extentreports>
