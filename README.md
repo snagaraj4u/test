@@ -1,237 +1,262 @@
-# Selenium TestNG Hybrid Framework
+# Selenium Cucumber Automation Framework for .NET Applications
 
-A comprehensive, robust, and flexible Selenium TestNG hybrid framework designed for testing .NET applications. This framework follows industry best practices and provides a solid foundation for scalable test automation.
+A robust and scalable BDD (Behavior-Driven Development) automation framework built with Selenium WebDriver and Cucumber for testing .NET applications. This framework follows industry best practices and provides comprehensive test automation capabilities.
 
-## 🚀 Framework Features
+## 🚀 Framework Architecture
 
-### Core Features
-- **Hybrid Framework**: Combines Data-Driven, Keyword-Driven, and Page Object Model approaches
-- **Cross-Browser Support**: Chrome, Firefox, Edge, Safari
-- **Parallel Execution**: TestNG parallel execution support
-- **Comprehensive Reporting**: ExtentReports with screenshots and detailed logging
-- **Data-Driven Testing**: Excel and JSON data support
-- **Configuration Management**: Centralized configuration with properties files
-- **Robust Logging**: Log4j2 integration with multiple appenders
-- **Screenshot Handling**: Automatic screenshot capture on test failures
-- **Exception Handling**: Comprehensive error handling and recovery
+This framework implements a hybrid approach combining:
+- **BDD with Cucumber** - Natural language test scenarios
+- **Page Object Model** - Maintainable and reusable page components
+- **Data-Driven Testing** - External test data management
+- **Parallel Execution** - Faster test execution
+- **Comprehensive Reporting** - Multiple reporting formats
 
-### Framework Components
-- **Base Classes**: BaseTest, BasePage for common functionality
-- **Page Object Model**: Clean separation of page elements and actions
-- **Utility Classes**: WebDriver utilities, Excel/JSON utilities, Configuration readers
-- **Test Listeners**: TestNG listeners for test execution events
-- **Driver Management**: Thread-safe WebDriver management
-- **Reporting**: ExtentReports with customizable themes and detailed logs
+## 📋 Features
 
-## 📁 Project Structure
+### Core Capabilities
+- ✅ Cross-browser testing (Chrome, Firefox, Edge, Safari)
+- ✅ Headless execution support
+- ✅ Parallel test execution
+- ✅ BDD test scenarios with Cucumber
+- ✅ Page Object Model implementation
+- ✅ Comprehensive logging with Log4j2
+- ✅ Screenshot capture on failures
+- ✅ Multiple reporting formats (ExtentReports, Allure, HTML)
+- ✅ Data-driven testing with JSON/Excel
+- ✅ Configuration management
+- ✅ CI/CD pipeline support
+
+### .NET Application Specific
+- ✅ Windows Authentication support
+- ✅ SSL certificate handling
+- ✅ .NET Framework and .NET Core compatibility
+- ✅ Security testing capabilities
+- ✅ Performance validation
+- ✅ Accessibility testing support
+
+## 🏗️ Project Structure
 
 ```
-selenium-testng-hybrid-framework/
+selenium-cucumber-dotnet-framework/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── hybridframework/
-│   │   │           ├── base/
-│   │   │           │   ├── BaseTest.java
-│   │   │           │   └── BasePage.java
-│   │   │           ├── constants/
-│   │   │           │   └── FrameworkConstants.java
-│   │   │           ├── drivers/
-│   │   │           │   └── DriverManager.java
-│   │   │           ├── listeners/
-│   │   │           │   ├── TestListener.java
-│   │   │           │   └── ExtentReportListener.java
-│   │   │           ├── pages/
-│   │   │           │   └── LoginPage.java
-│   │   │           └── utils/
-│   │   │               ├── ConfigReader.java
-│   │   │               ├── WebDriverUtils.java
-│   │   │               ├── ExtentReportManager.java
-│   │   │               ├── ExcelUtils.java
-│   │   │               └── JsonUtils.java
-│   │   └── resources/
-│   │       ├── config/
-│   │       │   └── config.properties
-│   │       ├── log4j2/
-│   │       │   └── log4j2.xml
-│   │       └── testdata/
-│   │           └── TestData.json
+│   ├── main/java/com/dotnet/automation/
+│   │   ├── constants/          # Framework constants
+│   │   ├── drivers/           # WebDriver management
+│   │   ├── hooks/             # Cucumber hooks
+│   │   ├── pages/             # Page Object classes
+│   │   └── utils/             # Utility classes
 │   └── test/
-│       ├── java/
-│       │   └── com/
-│       │       └── hybridframework/
-│       │           └── tests/
-│       │               └── LoginTest.java
+│       ├── java/com/dotnet/automation/
+│       │   ├── runners/       # Test runners
+│       │   └── stepdefinitions/ # Cucumber step definitions
 │       └── resources/
-│           └── testng/
-├── test-output/
-├── screenshots/
-├── logs/
-├── pom.xml
-├── testng.xml
-└── README.md
+│           ├── features/      # Cucumber feature files
+│           ├── testdata/      # Test data files
+│           └── config/        # Configuration files
+├── test-output/               # Test reports
+├── screenshots/              # Test screenshots
+├── logs/                     # Application logs
+├── pom.xml                   # Maven dependencies
+└── README.md                 # Project documentation
 ```
 
 ## 🛠️ Prerequisites
 
-- **Java 11+**: Required for running the framework
-- **Maven 3.6+**: For dependency management and build
-- **Chrome/Firefox/Edge**: Browsers for test execution
-- **Eclipse/IntelliJ**: IDE for development (Eclipse recommended as per requirements)
+- **Java 11+** - Required for framework execution
+- **Maven 3.6+** - For dependency management and build
+- **Chrome/Firefox/Edge** - Browsers for test execution
+- **IDE** - IntelliJ IDEA or Eclipse for development
 
-## 🔧 Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Clone/Download the Framework
+### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd selenium-testng-hybrid-framework
+cd selenium-cucumber-dotnet-framework
 ```
 
-### 2. Import into Eclipse
-1. Open Eclipse IDE
-2. Go to File > Import > Existing Maven Projects
-3. Browse to the framework directory
-4. Select the project and click Finish
-5. Wait for Maven to download dependencies
-
-### 3. Configure the Framework
-Edit `src/main/resources/config/config.properties` to set your preferences:
-```properties
-# Browser Configuration
-browser=chrome
-headless=false
-maximize=true
-
-# Application Configuration
-app.url=https://demoqa.com/login
-environment=qa
-
-# Test Data Configuration
-test.data.path=src/main/resources/testdata/
-
-# Reporting Configuration
-extent.report.path=test-output/ExtentReport.html
-```
-
-### 4. Install Dependencies
+### 2. Install Dependencies
 ```bash
 mvn clean install
 ```
 
+### 3. Configure Framework
+Edit `src/test/resources/config/config.properties`:
+```properties
+# Browser Configuration
+browser=chrome
+headless=true
+maximize=true
+
+# Application Configuration
+app.url=https://your-dotnet-app.com
+environment=qa
+
+# .NET Specific Configuration
+dotnet.framework.version=4.8
+windows.authentication=false
+ssl.certificate.validation=false
+```
+
+### 4. Verify Setup
+```bash
+mvn clean compile
+```
+
 ## 🎯 Running Tests
 
-### Running Tests from Eclipse
-1. Right-click on `testng.xml`
-2. Select "Run As" > "TestNG Suite"
-3. View results in Eclipse TestNG plugin
+### Command Line Execution
 
-### Running Tests from Command Line
 ```bash
-# Run all tests
-mvn test
+# Run all smoke tests
+mvn test -Dcucumber.filter.tags="@smoke"
 
-# Run specific test suite
-mvn test -Dtest=LoginTest
+# Run regression tests
+mvn test -Dcucumber.filter.tags="@regression"
 
-# Run with specific browser
+# Run specific browser
 mvn test -Dbrowser=chrome
 
 # Run in headless mode
 mvn test -Dheadless=true
 
 # Run with specific environment
-mvn test -Denvironment=qa
+mvn test -Denvironment=staging
+
+# Run parallel tests
+mvn test -Dparallel.execution=true -Dthread.count=3
+
+# Run specific feature
+mvn test -Dcucumber.features="src/test/resources/features/Login.feature"
 ```
 
-### Running Specific Test Groups
+### IDE Execution
+1. Right-click on `CucumberTestRunner.java`
+2. Select "Run as JUnit Test"
+3. View results in IDE test runner
+
+### Tag-based Execution
 ```bash
-# Run smoke tests
-mvn test -Dgroups=smoke
+# Smoke tests
+mvn test -Dcucumber.filter.tags="@smoke"
 
-# Run regression tests
-mvn test -Dgroups=regression
+# Critical tests
+mvn test -Dcucumber.filter.tags="@critical"
 
-# Run negative tests
-mvn test -Dgroups=negative
+# .NET specific tests
+mvn test -Dcucumber.filter.tags="@dotnet"
+
+# Negative test scenarios
+mvn test -Dcucumber.filter.tags="@negative"
+
+# Security tests
+mvn test -Dcucumber.filter.tags="@security"
 ```
 
 ## 📊 Test Reporting
 
-### ExtentReports
-- **Location**: `test-output/ExtentReport.html`
-- **Features**: 
-  - Detailed test execution results
-  - Screenshots on failures
-  - System information
-  - Test categorization
-  - Interactive charts and graphs
+### Available Report Types
 
-### Logs
-- **Location**: `logs/`
-- **Files**:
-  - `application.log`: General application logs
-  - `test-execution.log`: Test execution logs with rotation
+1. **ExtentReports** - Interactive HTML reports
+   - Location: `test-output/ExtentReport.html`
+   - Features: Screenshots, logs, charts, test categorization
 
-### Screenshots
-- **Location**: `screenshots/`
-- **Naming**: `Screenshot_TestName_Timestamp.png`
-- **Trigger**: Automatic on test failures (configurable)
+2. **Cucumber HTML Reports** - Standard Cucumber reports
+   - Location: `target/cucumber-reports/`
+   - Features: Scenario details, step execution status
 
-## 🧪 Sample Test Cases
+3. **Allure Reports** - Advanced reporting with trends
+   ```bash
+   mvn allure:serve
+   ```
 
-The framework includes comprehensive login test scenarios:
+4. **JUnit XML Reports** - CI/CD integration
+   - Location: `target/cucumber-reports/Cucumber.xml`
 
-1. **Positive Tests**:
-   - Valid login with correct credentials
-   - Login page element verification
+### Report Features
+- 📸 Automatic screenshot capture on failures
+- 📝 Detailed step-by-step execution logs
+- 📈 Test execution trends and statistics
+- 🏷️ Test categorization by tags
+- ⏱️ Performance metrics and timing
+- 📊 Pass/Fail ratios and success rates
 
-2. **Negative Tests**:
-   - Invalid username/password
-   - Empty field validations
-   - Special character handling
+## 🧪 Test Development
 
-3. **Security Tests**:
-   - SQL injection prevention
-   - XSS attack prevention
+### Creating Feature Files
+```gherkin
+Feature: User Authentication
+  As a user of the .NET application
+  I want to be able to login with my credentials
+  So that I can access the application functionality
 
-4. **Boundary Tests**:
-   - Long input values
-   - Character limits
+  @smoke @dotnet @critical
+  Scenario: Successful login with valid credentials
+    Given I am on the login page
+    When I enter valid username "testuser" and password "Test@123"
+    And I click the login button
+    Then I should be successfully logged in
+```
+
+### Implementing Step Definitions
+```java
+@When("I enter valid username {string} and password {string}")
+public void i_enter_valid_username_and_password(String username, String password) {
+    logger.info("Entering valid credentials for user: {}", username);
+    loginPage.enterUsername(username);
+    loginPage.enterPassword(password);
+}
+```
+
+### Creating Page Objects
+```java
+public class LoginPage extends BasePage {
+    @FindBy(id = "userName")
+    private WebElement usernameField;
+    
+    public void enterUsername(String username) {
+        logger.info("Entering username: {}", username);
+        enterText(usernameLocator, username);
+    }
+}
+```
 
 ## 🔧 Configuration Options
 
 ### Browser Configuration
 ```properties
-# Supported browsers: chrome, firefox, edge, safari
+# Supported: chrome, firefox, edge, safari
 browser=chrome
-headless=false
+headless=true
 maximize=true
 ```
 
-### Timeout Configuration
+### Timeout Settings
 ```properties
 implicit.wait=10
 explicit.wait=20
 page.load.timeout=30
 ```
 
-### Screenshot Configuration
+### .NET Application Settings
 ```properties
-screenshot.on.pass=false
-screenshot.on.fail=true
-screenshot.path=screenshots/
+dotnet.framework.version=4.8
+dotnet.core.version=6.0
+application.type=web
+windows.authentication=false
+ssl.certificate.validation=false
 ```
 
 ### Parallel Execution
 ```properties
-parallel.execution=false
-thread.count=2
+parallel.execution=true
+thread.count=3
+cucumber.execution.parallel.enabled=true
 ```
 
-## 📈 Data-Driven Testing
+## � Test Data Management
 
-### JSON Data Format
+### JSON Test Data
 ```json
 {
   "loginTestData": [
@@ -239,91 +264,99 @@ thread.count=2
       "testCase": "ValidLogin",
       "username": "testuser",
       "password": "Test@123",
-      "expectedResult": "Success",
-      "description": "Valid login test"
+      "expectedResult": "Success"
     }
   ]
 }
 ```
 
-### Excel Data Format
-- **Sheet Name**: Login
-- **Columns**: TestCase, Username, Password, ExpectedResult, Description
+### Excel Test Data
+- Supported formats: .xlsx, .xls
+- Multiple sheets support
+- Dynamic data reading capabilities
 
-### Usage in Tests
-```java
-// Get test data from JSON
-Map<String, String> testData = JsonUtils.getLoginTestDataByTestCase("ValidLogin");
-String username = testData.get("username");
-String password = testData.get("password");
+## 🔒 Security Testing
+
+The framework includes built-in security testing capabilities:
+
+- ✅ SQL Injection prevention testing
+- ✅ XSS attack prevention
+- ✅ Authentication bypass attempts
+- ✅ Input validation testing
+- ✅ Session management validation
+
+## 🚀 CI/CD Integration
+
+### Jenkins Pipeline
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                sh 'mvn clean test -Dcucumber.filter.tags="@smoke"'
+            }
+            post {
+                always {
+                    publishHTML([
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'test-output',
+                        reportFiles: 'ExtentReport.html',
+                        reportName: 'Test Report'
+                    ])
+                }
+            }
+        }
+    }
+}
 ```
 
-## 🎨 Customization
-
-### Adding New Page Objects
-1. Create new page class extending `BasePage`
-2. Define page elements using `@FindBy` annotations
-3. Implement page-specific methods
-4. Add verification methods
-
-### Adding New Test Classes
-1. Create new test class extending `BaseTest`
-2. Use `@Test` annotations with groups and descriptions
-3. Implement test methods with proper assertions
-4. Add test data if needed
-
-### Custom Utilities
-1. Create utility classes in `utils` package
-2. Use static methods for common operations
-3. Add proper logging and error handling
-
-## 🔒 Best Practices
-
-### Code Quality
-- Follow Page Object Model pattern
-- Use meaningful method and variable names
-- Add proper comments and documentation
-- Implement proper exception handling
-
-### Test Design
-- Keep tests independent and atomic
-- Use data-driven approach for test data
-- Implement proper assertions
-- Add descriptive test names and descriptions
-
-### Maintenance
-- Regular dependency updates
-- Code review and refactoring
-- Test data management
-- Continuous integration setup
+### GitHub Actions
+```yaml
+name: Automated Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+      - name: Run tests
+        run: mvn clean test -Dheadless=true
+```
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-1. **Browser Driver Issues**:
-   - WebDriverManager handles driver downloads automatically
+1. **Browser Driver Issues**
+   - WebDriverManager handles automatic driver downloads
    - Ensure browser is installed and up-to-date
 
-2. **Element Not Found**:
-   - Check element locators
-   - Verify page load timing
-   - Use explicit waits
+2. **Element Not Found**
+   - Check element locators in page objects
+   - Verify wait conditions and timeouts
+   - Use explicit waits for dynamic elements
 
-3. **Test Data Issues**:
-   - Verify test data file paths
-   - Check data format and structure
-   - Ensure proper encoding
+3. **Test Data Issues**
+   - Verify JSON format validity
+   - Check file paths in configuration
+   - Ensure proper encoding (UTF-8)
 
-4. **Reporting Issues**:
-   - Check file permissions
-   - Verify output directory exists
-   - Check disk space
+4. **Headless Mode Issues**
+   - Some elements may behave differently in headless mode
+   - Increase wait times if needed
+   - Use window size settings for consistent rendering
 
 ### Debug Mode
-Enable debug logging by updating `log4j2.xml`:
+Enable debug logging in `log4j2.xml`:
 ```xml
-<Logger name="com.hybridframework" level="DEBUG" additivity="false">
+<Logger name="com.dotnet.automation" level="DEBUG">
     <AppenderRef ref="Console"/>
     <AppenderRef ref="RollingFileAppender"/>
 </Logger>
@@ -331,46 +364,58 @@ Enable debug logging by updating `log4j2.xml`:
 
 ## 📚 Dependencies
 
-### Core Dependencies
-- **Selenium WebDriver**: 4.15.0
-- **TestNG**: 7.8.0
-- **WebDriverManager**: 5.6.2
-- **ExtentReports**: 5.1.1
+### Core Testing Framework
+- **Selenium WebDriver** 4.15.0 - Web automation
+- **Cucumber** 7.14.0 - BDD testing framework
+- **JUnit 5** 5.10.0 - Test execution engine
 
-### Utility Dependencies
-- **Apache POI**: 5.2.4 (Excel handling)
-- **Jackson**: 2.15.2 (JSON handling)
-- **Log4j2**: 2.20.0 (Logging)
-- **Commons IO**: 2.11.0 (File operations)
+### Reporting & Utilities
+- **ExtentReports** 5.1.1 - Advanced reporting
+- **Allure** 2.24.0 - Test reporting with trends
+- **AssertJ** 3.24.2 - Fluent assertions
+- **Log4j2** 2.20.0 - Logging framework
+
+### Data Management
+- **Apache POI** 5.2.4 - Excel file handling
+- **Jackson** 2.15.2 - JSON processing
+- **WebDriverManager** 5.6.2 - Driver management
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new features
-5. Ensure all tests pass
-6. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
 
-## 📜 License
+### Code Standards
+- Follow Java naming conventions
+- Add proper JavaDoc documentation
+- Include unit tests for utilities
+- Update feature files for new functionality
+- Maintain logging consistency
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## � License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
 For issues and questions:
 1. Check the troubleshooting section
-2. Review existing issues
+2. Review existing GitHub issues
 3. Create a new issue with detailed description
-4. Provide logs and screenshots
+4. Include logs and screenshots when applicable
 
 ## 🔄 Version History
 
-- **v1.0.0**: Initial release with core framework features
-- **v1.1.0**: Added data-driven testing support
-- **v1.2.0**: Enhanced reporting and logging
-- **v1.3.0**: Added parallel execution support
+- **v1.0.0** - Initial framework release
+- **v1.1.0** - Added parallel execution support
+- **v1.2.0** - Enhanced .NET application support
+- **v1.3.0** - Integrated security testing capabilities
 
 ---
 
-**Happy Testing! 🚀**
+**Happy Testing! 🎯**
+
+*Framework developed by QA Automation Team for enterprise .NET application testing*

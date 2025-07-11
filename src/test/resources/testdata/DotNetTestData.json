@@ -1,0 +1,73 @@
+{
+  "loginTestData": [
+    {
+      "testCase": "ValidLogin",
+      "username": "testuser",
+      "password": "Test@123",
+      "expectedResult": "Success",
+      "description": "Valid user credentials for successful login"
+    },
+    {
+      "testCase": "InvalidUsername",
+      "username": "invaliduser",
+      "password": "Test@123",
+      "expectedResult": "Failure",
+      "description": "Invalid username with valid password"
+    },
+    {
+      "testCase": "InvalidPassword",
+      "username": "testuser",
+      "password": "wrongpassword",
+      "expectedResult": "Failure",
+      "description": "Valid username with invalid password"
+    },
+    {
+      "testCase": "EmptyCredentials",
+      "username": "",
+      "password": "",
+      "expectedResult": "Validation Error",
+      "description": "Empty username and password fields"
+    },
+    {
+      "testCase": "SQLInjection",
+      "username": "' OR '1'='1",
+      "password": "' OR '1'='1",
+      "expectedResult": "Security Block",
+      "description": "SQL injection attempt - should be blocked"
+    }
+  ],
+  "userProfiles": [
+    {
+      "userType": "Admin",
+      "username": "admin",
+      "password": "Admin@123",
+      "permissions": ["read", "write", "delete", "admin"],
+      "department": "IT"
+    },
+    {
+      "userType": "StandardUser",
+      "username": "user001",
+      "password": "User@123",
+      "permissions": ["read", "write"],
+      "department": "Sales"
+    },
+    {
+      "userType": "ReadOnlyUser",
+      "username": "readonly",
+      "password": "ReadOnly@123",
+      "permissions": ["read"],
+      "department": "HR"
+    }
+  ],
+  "applicationSettings": {
+    "baseUrl": "https://demoqa.com/login",
+    "environment": "QA",
+    "timeout": 30,
+    "retryAttempts": 3,
+    "browserConfig": {
+      "defaultBrowser": "chrome",
+      "headless": true,
+      "windowSize": "1920x1080"
+    }
+  }
+}
