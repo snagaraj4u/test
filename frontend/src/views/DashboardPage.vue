@@ -3,8 +3,7 @@
     <!-- Top Navigation -->
     <div class="flex justify-between items-center mb-8">
       <div class="flex items-center gap-3">
-        <span class="text-3xl">🤖</span>
-        <h1 class="text-2xl font-bold text-gray-800">NANO BANA</h1>
+        <h1 class="text-2xl font-bold text-gray-800">Fun Skills</h1>
       </div>
       <button
         @click="handleLogout"

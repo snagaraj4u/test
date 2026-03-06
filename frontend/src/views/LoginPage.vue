@@ -3,18 +3,12 @@
     <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md w-full">
       <!-- Header -->
       <div class="bg-gradient-nano p-8 text-center">
-        <div class="text-5xl mb-3">🤖</div>
-        <h1 class="text-3xl font-bold text-white mb-1">NANO BANA</h1>
-        <p class="text-white text-lg">✨ Welcome to Nano Bana</p>
+        <h1 class="text-4xl font-bold text-white">FunSkills</h1>
+        <p class="text-white text-lg mt-2">Learn & Grow Together</p>
       </div>
 
       <!-- Login Form -->
       <div class="p-8">
-        <!-- Role Selector -->
-        <div class="mb-6">
-          <RoleSelector v-model="selectedRole" />
-        </div>
-
         <!-- Form -->
         <form @submit.prevent="handleLogin" class="space-y-4">
           <!-- Username -->
@@ -69,7 +63,7 @@
 
         <!-- Help Text -->
         <p class="text-center text-gray-600 text-xs mt-4">
-          Demo users: amy/password123, admin/admin123
+          Demo: amy/password123 | admin/admin123
         </p>
       </div>
     </div>
@@ -80,12 +74,10 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/auth';
-import RoleSelector from '../components/RoleSelector.vue';
 
 const router = useRouter();
 const authStore = useAuthStore();
 
-const selectedRole = ref('student');
 const formData = ref({
   username: '',
   password: ''
